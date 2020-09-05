@@ -8,7 +8,6 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <h1> Hello World! </h1>
           <BurgerBuilder />
         </Layout>
       </div>
