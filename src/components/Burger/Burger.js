@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom'
 
 import classes from './Burger.module.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
@@ -9,7 +8,7 @@ const burger = (props) => {
   let transformedIngredients = Object.keys(props.ingredients)
     .map(ingKey => {
       return [...Array(props.ingredients[ingKey])].map((_,i) => {
-        return <BurgerIngredient key={ingKey + i} type={ingKey} />
+        return <BurgerIngredient key={ingKey + i} type={ingKey} />;
       });
     })
     .reduce((arr, el) => {
@@ -27,4 +26,4 @@ const burger = (props) => {
     </div>);
 };
 
-export default withRouter(burger);
+export default burger;
