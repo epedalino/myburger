@@ -4,7 +4,6 @@ import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
-  //This could be a functional component. Doesn't have to be a class
   componentWillUpdate() {
     console.log('[OrderSummary] WillUpdate');
   }
@@ -13,8 +12,7 @@ class OrderSummary extends Component {
     .map(ingKey => {
       return (
         <li key={ingKey}>
-          <span style={{textTransform: 'capitalize'}}>{ingKey}</span>
-          :{this.props.ingredients[ingKey]}
+          <span style={{textTransform: 'capitalize'}}>{ingKey}</span>:{this.props.ingredients[ingKey]}
         </li>);
     });
 
